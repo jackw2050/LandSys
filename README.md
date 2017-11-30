@@ -257,4 +257,75 @@ Overlays are located at: /lib/firmware
 
 You can load the overlays in the /boot/uEnv.txt file
 
-To list overlays: cat  
+List slots:
+cat /sys/devices/platform/bone_capemgr/slots
+
+Add device: sudo sh -c "echo 'BB-ADC' > /sys/devices/platform/bone_capemgr/slots"
+Remove device:
+sudo sh -c "echo '-4' > /sys/devices/platform/bone_capemgr/slots"
+
+sudo sh -c "echo 'univ-nhdmi' > /sys/devices/platform/bone_capemgr/slots"
+
+
+
+    2 years ago
+univ-all-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbb-EVA-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbb-EVx-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbb-Exx-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbb-xVA-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbb-xVx-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbb-xxx-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbgw-00A0.dts  univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbgw-EW-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbgw-Ex-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbgw-xW-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-bbgw-xx-00A0.dts   univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-emmc-00A0.dts  univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-hdmi-00A0.dts  univ-* fix the pruss node in v4.9.x-ti kernels  3 months ago
+univ-nhdmi-00A0.dts univ-* fix the pr
+
+cape-CBB-Serial-r01.dts dtbos: add ti,beaglebone-green  2 years ago
+cape-bone-ibb-00A0.dts  add overlay for IBB cape    2 years ago
+cape-univ-audio-00A0.dts    cape-univ* convert space to tab, to more easly share changes    4 months ago
+cape-univ-emmc-00A0.dts cape-univ* convert space to tab, to more easly share changes    4 months ago
+cape-univ-hdmi-00A0.dts cape-univ* convert space to tab, to more easly share changes    4 months ago
+cape-universal-00A0.dts cape-univ* convert space to tab, to more easly share changes    4 months ago
+cape-universala-00A0.dts    cape-univ* convert space to tab, to more easly share changes    4 months ago
+cape-universalh-00A0.dts    cape-univ* convert space to tab, to more easly share changes    4 months ago
+cape-universaln-00A0.dts    cape-univ* convert space to tab, to more easly share changes    4 months ago
+dev-USB-PWR-CTL-00A1.dts    testers: control usb hub power                           
+      
+       
+
+
+
+BB-HDMI-TDA998x-00A0.dts    add: AM335X-20-00A0.dts, for old bbb    7 months ago
+BB-I2C1-00A0.dts            fix: BB-I2C1-00A0.dts   2 years ago
+BB-I2C1-MCP7940X-00A0.dts   add: BB-I2C1-MCP7940X-00A0.dts, clone of BB-RTC-01-00A0.dts but with …  7 days ago
+BB-I2C1-PCA9685-00A0.dts    add: BB-I2C1-PCA9685, note we use gpio-leds to enable user space acce…  2 years ago
+BB-I2C2-00A0.dts            rename: BB-I2C2-00A0.dts    a year ago
+BB-I2C2-PCF8523-00A0.dts    add: BB-I2C2-PCF8523-00A0, includes aliasis to force pcf8523 as rtc0 …  8 days ago
+BB-NHDMI-TDA998x-00A0.dts   add BBBW wl1835 overlay (U-Boot only)   8 months ago
+BB-PWM0-00A0.dts            add pwm and seeed's LCD cape    2 years ago
+BB-PWM1-00A0.dts            add pwm and seeed's LCD cape    2 years ago
+BB-PWM2-00A0.dts            add pwm and seeed's LCD cape    2 years ago
+BB-RELAY-4PORT-00A0.dts     add cape: http://elinux.org/CircuitCo:Relay_Cape relays are modeled a…  2 years ago
+BB-RTC-01-00A0.dts          BB-RTC-01-00A0: pass rtc aliases    7 days ago
+BB-SPI0-ADS8688-0A00.dts    Update BB-SPI0-ADS8688-0A00.dts 4 months ago
+BB-SPI0-MCP3008-00A0.dts    Update BB-SPI0-MCP3008-00A0.dts 4 months ago
+BB-SPIDEV0-00A0.dts         bb-spidev* these need unique names for part-number  2 years ago
+BB-SPIDEV1-00A0.dts         bb-spidev* these need unique names for part-number  2 years ago
+BB-SPIDEV1A1-00A0.dts       bb-spidev* these need unique names for part-number  2 years ago
+BB-UART1-00A0.dts           fix bb_uart1_pins by omitting i2c2 pins 2 years ago
+BB-UART2-00A0.dts           uart2, split out the rtscts version to BB-UART2-RTSCTS-00A0 like 3.8    2 years ago
+BB-UART2-RTSCTS-00A0.dts    BB-UART2-RTSCTS-00A0: match 3.8 part-number 2 years ago
+BB-UART3-00A0.dts           fixes: we should wire this into travis..    2 years ago
+BB-UART4-00A0.dts           Merge branch 'master' of https://github.com/beagleboard/bb.org-overlays 2 years ago
+BB-UART4-RS485-00A0.dts     BB-UART4-RS485-00A0.dts: cleanup using common headers   2 years ago
+BB-UART5-00A0.dts           Merge branch 'master' of https://github.com/beagleboard/bb.org-overlays 2 years ago
+BB-VIEW-LCD4-01-00A0.dts    24bit: lcd: enable blue-and-red-wiring = "crossed"; otherwise xorg do…  5 months ago
+BB-VIEW-LCD7-01-00A0.dts    24bit: lcd: enable blue-and-red-wiring = "crossed"; otherwise xorg do…  5 months ago
+BB-W1-P9.12-00A0.dts        add onewire example, P9.12
+
+
