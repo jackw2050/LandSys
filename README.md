@@ -252,7 +252,7 @@ To Run
 
 
 Device Tree Overlay
-
+https://github.com/beagleboard/bb.org-overlays/tree/master/src/arm
 Overlays are located at: /lib/firmware
 
 You can load the overlays in the /boot/uEnv.txt file
